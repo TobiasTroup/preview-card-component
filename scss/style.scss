@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+$font-family-stack: "Outfit", sans-serif;
+$font-size-paragraph: 15px;
+
+$color-white: hsl(0, 0%, 100%);
+$color-light-grey: hsl(212, 45%, 89%);
+$color-grayish-blue: hsl(220, 15%, 55%);
+$color-dark-blue: hsl(218, 44%, 22%);
+
+$color-soft-blue: hsl(215, 51%, 70%);
+$color-cyan: hsl(178, 100%, 50%);
+
+* body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(218, 44%, 15%);
+    overflow: hidden;
+    height: 100vh;
+}
+
+hr {
+    color: $color-grayish-blue;
+}
+
+.custom_container {
+    height: 100%;
+}
+
+.main-content {
+    width: 25%;
+    border-radius: 10px;
+    background-color: $color-dark-blue;
+    box-shadow: 0px 0px 0px 20px rgba(7, 15, 27, 0.1),
+        0px 0px 0px 40px rgba(44, 81, 136, 0.1);
+    .image-width img {
+        width: 100%;
+    }
+    .crypto-title {
+        font-family: $font-family-stack;
+        color: $color-white;
+    }
+    .crypto-body {
+        font-family: $font-family-stack;
+        font-size: 18px;
+        color: $color-grayish-blue;
+    }
+    .crypto-details {
+        .crypto-amount {
+            color: $color-cyan;
+            font-weight: bolder;
+            font-size: $font-size-paragraph;
+            font-family: $font-family-stack;
+        }
+        .exp-date {
+            color: $color-grayish-blue;
+        }
+    }
+    .crypto-creator {
+        &__avatar {
+            width: 12%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #crypto-creator__creation-text {
+        color: $color-soft-blue;
+        font-weight: 400;
+        font-family: $font-family-stack;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    #creator a {
+        text-decoration: none;
+        font-family: $font-family-stack;
+    }
+
+    #creator a:hover {
+        color: $color-cyan !important;
+    }
+
+    .crypto-creator {
+        p {
+            #creator a:hover > div#image-change img {
+                    visibility: hidden;
+            }
+        }
+    }
+}
