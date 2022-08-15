@@ -37,18 +37,54 @@ hr {
     background-color: $color-dark-blue;
     box-shadow: 0px 0px 0px 20px rgba(7, 15, 27, 0.1),
         0px 0px 0px 40px rgba(44, 81, 136, 0.1);
+
     .image-width img {
         width: 100%;
     }
+
+    .image-width {
+        .image__overlay {
+            position: absolute;
+            background-color: $color-white;
+            top: 22.7%;
+            left: 42.8%;
+            width: 14.5%;
+            height: 29.5%;
+            background-color: hsla(178, 100%, 50%, 0.5);
+            // transform: translate(-50%, -50%);
+            border-radius: 3px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+        }
+
+        .image__overlay:hover img {
+            position: absolute;
+            width: 10%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
     .crypto-title {
         font-family: $font-family-stack;
         color: $color-white;
+
+        a {
+            color: $color-white;
+        }
     }
+
     .crypto-body {
         font-family: $font-family-stack;
         font-size: 18px;
         color: $color-grayish-blue;
     }
+
     .crypto-details {
         .crypto-amount {
             color: $color-cyan;
@@ -56,18 +92,22 @@ hr {
             font-size: $font-size-paragraph;
             font-family: $font-family-stack;
         }
+
         .exp-date {
             color: $color-grayish-blue;
         }
     }
+
     .crypto-creator {
         &__avatar {
             width: 12%;
+
             img {
                 width: 100%;
             }
         }
     }
+
     #crypto-creator__creation-text {
         color: $color-soft-blue;
         font-weight: 400;
@@ -75,19 +115,22 @@ hr {
         letter-spacing: 1px;
         font-size: 15px;
     }
-    #creator a {
+
+    #creator a,
+    .crypto-title a {
         text-decoration: none;
         font-family: $font-family-stack;
     }
 
-    #creator a:hover {
-        color: $color-cyan !important;
+    #creator a:hover,
+    .crypto-title a:hover {
+        color: $color-cyan  !important;
     }
 
     .crypto-creator {
         p {
-            #creator a:hover > div#image-change img {
-                    visibility: hidden;
+            #creator a:hover>div#image-change img {
+                visibility: hidden;
             }
         }
     }
